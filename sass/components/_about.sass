@@ -1,0 +1,40 @@
+.about
+    position: relative
+    width: 27%
+    height: auto
+    margin: 25rem 3% 0 3%
+    float: left
+    font-size: $font-default
+    background-color: rgba($color-white, .5)
+    border-radius: 3px
+    border: 1px solid $color-light-green
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15)
+    transition: all .2s
+
+    &:hover
+      transform: translateY(-2rem) scale(1.1)
+
+    &-container
+      width: 100%
+      margin: 0 auto
+      text-align: center
+
+    &-paragraph
+      padding: 0 2rem
+      font-size: $font-default
+
+.fa
+  &-map-marker,
+  &-leaf,
+  &-heart
+    margin-top: 2rem
+    font-size: $font-xl
+    color: transparent
+    background-image: linear-gradient(to right, rgba($color-light-green, .6), rgba($color-dark-green, .8))
+    -webkit-background-clip: text
+    background-clip: text
+
+.hr-about
+  background-color: $color-light-green
+  border-color: $color-light-green
+  color: $color-light-green
