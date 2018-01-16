@@ -1,0 +1,67 @@
+.form
+  width: 100%
+  height: 100vh
+  background-image: linear-gradient(105deg, rgba($color-white, .8) 0%, rgba($color-white, .8) 100%), url("https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=967&q=80");
+  background-size: cover
+  background-position: top center
+
+  &__box
+    @include center
+    width: 33%
+    height: 66%
+    text-align: center
+    background-color: rgba($color-white, .8)
+    border-radius: 2px
+    border: 1px solid $color-dark-green
+
+  &__group
+    padding: 2%
+    text-align: left
+
+  &__input
+    display: block
+    width: 98%
+    padding: 1rem 1rem
+    border-radius: 2px
+    border: none
+    border-bottom: 3px solid transparent
+    color: $color-black
+    background-color: $color-white
+    font-size: $font-default
+    font-family: 'Montserrat', sans-serif
+    transition: all .3s
+
+    &-date
+      display: inline
+      width: 48%
+      float: left
+      margin-right: 2%
+
+    &-time
+      display: inline
+      width: 48%
+
+    &:focus
+      outline: none
+      box-shadow: 0 1rem 2rem rgba($color-black, .1)
+      border-bottom: 3px solid $color-dark-green
+
+    &:focus:invalid
+      border-bottom: 3px solid red
+
+    &::-webkit-input-placeholder
+      color: $color-black
+
+  &__label
+    display: block
+
+    &-date
+      margin-left: 2.5%
+
+    &-time
+      margin-left: 42.5%
+
+  &__input:placeholder-shown + &__label
+    opacity: 0
+    visibility: hidden
+    transform: translateY(-4rem)
