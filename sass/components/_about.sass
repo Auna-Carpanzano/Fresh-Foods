@@ -11,6 +11,11 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15)
     transition: all .2s
 
+    @include responsive(phone)
+      float: none
+      width: 80%
+      margin: 2rem auto
+
     &:hover
       transform: translateY(-2rem) scale(1.1)
 
