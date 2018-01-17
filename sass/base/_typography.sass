@@ -30,6 +30,11 @@
     text-transform: uppercase
     letter-spacing: 2.5px
 
+    @include responsive(phone)
+      position: relative
+      text-align: center
+      margin: 5rem auto 2.5rem auto
+
   &-tertiary
     color: $color-black
     font-size: $font-large
