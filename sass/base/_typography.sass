@@ -16,11 +16,12 @@
     font-size: $font-large
     font-weight: 400
 
+    @include responsive(phone)
+      padding: 2rem
+
   &-secondary
-    position: absolute
-    top: 10%
-    left: 50%
-    transform: translate(-50%, -50%)
+    margin: 10rem auto 0 auto
+    text-align: center
     color: $color-black
     font-size: $font-large
     font-weight: 400

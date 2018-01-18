@@ -1,13 +1,17 @@
 .menu
-  position: relative
   width: 27%
-  height: 48rem
+  height: 50rem
   float: left
-  margin: 20rem 3% 0 3%
+  margin: 15rem 3% 0 3%
   background-color: rgba($color-white, .5)
   font-size: $font-default
   box-shadow: 0 1.5rem 4rem rgba($color-black, .15)
   transition: all .2s
+
+  @include responsive(tab-port)
+    float: none
+    width: 60%
+    margin: 10rem auto
 
   &__container
     width: 100%
