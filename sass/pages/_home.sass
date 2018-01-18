@@ -14,11 +14,15 @@
 
   &-produce
     position: relative
+    padding: 5rem 0
 
   &-menu
     position: relative
     height: 85rem
     background-color: $color-white
+
+    @include responsive(tab-port)
+      height: auto
 
   &-contact
     position: relative
@@ -26,6 +30,6 @@
     background-color: $color-white
 
   &-footer
-    height: 45rem
+    height: auto
     color: white
     background-image: linear-gradient(to right bottom, $color-light-green, $color-dark-green)
