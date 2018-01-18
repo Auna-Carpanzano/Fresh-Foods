@@ -8,11 +8,17 @@
   &__box
     @include center
     width: 33%
-    height: 66%
+    height: auto
     text-align: center
     background-color: rgba($color-white, .8)
     border-radius: 2px
     border: 1px solid $color-dark-green
+
+    @include responsive(tab-port)
+      width: 66%
+
+    @include responsive(phone)
+      width: 80%
 
   &__group
     padding: 2%
