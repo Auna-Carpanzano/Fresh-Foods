@@ -19,6 +19,9 @@
   &:hover
     transform: translateY(-2rem) scale(1.1)
 
+    @include responsive(phone)
+      transform: none
+
   &-container
     width: 100%
     margin: 0 auto
