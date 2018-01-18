@@ -1,30 +1,46 @@
 .video
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  overflow: hidden
+  opacity: .4
+  z-index: -1
+
   &__content
     width: 100%
-    opacity: .4
-    position: relative
+    height: 100%
+    object-fit: cover
 
 .farmers
     width: 75%
-    box-shadow: 0 3rem 6rem rgba($color-black, .1)
-    border-radius: 2px
+    margin: 0 auto
+    padding: 7rem
+    backface-visibility: hidden
+
+    @include responsive(tab-port)
+      width: 100%
+      padding: 4rem
 
     &-box
       &-1
-        position: absolute
-        top: 30%
-        left: 50%
-        transform: translate(-50%, -30%) skewX(12deg)
+        transform: skewX(12deg)
         background-color: $color-white
         padding: 3rem
 
+        @include responsive(phone)
+          transform: skewX(0)
+          border-radius: 2px
+
       &-2
-        position: absolute
-        top: 85%
-        left: 50%
-        transform: translate(-50%, -85%) skewX(-12deg)
+        transform: skewX(-12deg)
         background-color: $color-white
         padding: 3rem
+
+        @include responsive(phone)
+          transform: skewX(0)
+          border-radius: 2px
 
     &__shape
       position: relative
@@ -41,8 +57,14 @@
       &-1
         transform: translateX(-1rem) skewX(-12deg)
 
+        @include responsive(phone)
+          transform: translateX(-1rem) skewX(0)
+
       &-2
         transform: translateX(-1rem) skewX(12deg)
+
+        @include responsive(phone)
+          transform: translateX(0) skewX(0)
 
     &__image
       height: 100%
@@ -62,8 +84,14 @@
       &-1
         transform: skewX(-12deg)
 
+        @include responsive(phone)
+          transform: skewX(0)
+
       &-2
         transform: skewX(12deg)
+
+        @include responsive(phone)
+          transform: skewX(0)
 
     &__link,
     &__link:link,
