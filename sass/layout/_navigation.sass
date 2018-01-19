@@ -32,3 +32,11 @@
     background-image: linear-gradient(to top, $color-light-green, $color-dark-green)
     backface-visibility: hidden
     transition: all .4s
+
+    @include responsive(tab-port)
+      top: 4.5rem
+      right: 4.5rem
+
+    @include responsive(phone)
+      top: 3.5rem
+      right: 3.5rem
