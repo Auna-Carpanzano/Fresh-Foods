@@ -1,0 +1,138 @@
+.navigation
+  &__checkbox
+    display: none
+
+  &__button
+    position: fixed
+    top: 6rem
+    right: 6rem
+    width: 7rem
+    height: 7rem
+    text-align: center
+    border-radius: 50%
+    z-index: 2000
+    cursor: pointer
+    background-color: $color-light-green
+
+    @include responsive(tab-port)
+      top: 4rem
+      right: 4rem
+
+    @include responsive(phone)
+      top: 3rem
+      right: 3rem
+
+  &__background
+    position: fixed
+    top: 6.5rem
+    right: 8rem
+    width: 1px
+    height: 1px
+    z-index: 1000
+    background-image: linear-gradient(to top, $color-light-green, $color-dark-green)
+    backface-visibility: hidden
+    transition: all .4s
+
+    @include responsive(tab-port)
+      top: 4.5rem
+      right: 4.5rem
+
+    @include responsive(phone)
+      top: 3.5rem
+      right: 3.5rem
+
+  &__container
+    position: fixed
+    top: 0rem
+    right: 0rem
+    width: 0
+    height: 100vh
+    z-index: 1500
+    opacity: 0
+    transition: all .2s
+    overflow: hidden
+
+  &__list
+    @include center
+    width: 100%
+    list-style: none
+    text-align: right
+
+  &__item
+    margin: 1rem
+
+  &__span
+    margin-right: 2rem
+    opacity: 0
+
+  &__link,
+    &:link,
+    &:visited
+      display: inline-block
+      padding: 1rem 2rem
+      color: $color-white
+      font-size: 3rem
+      font-weight: 300
+      text-decoration: none
+      text-transform: uppercase
+      transition: all .4s
+
+    &:hover,
+    &:active,
+    &:hover .navigation__span,
+    &:active .navigation__span
+      display: inline-block
+      opacity: 1
+      color: $color-black
+      transform: translateX(1rem)
+
+  &__checkbox:checked ~ &__background
+    width: 30rem
+    height: 100vh
+    transform: scale(1.7)
+
+  &__checkbox:checked ~ &__container
+    width: 100%
+    opacity: 1
+
+  &__icon
+    position: relative
+    margin-top: 3.5rem
+
+    &,
+    &::before,
+    &::after
+      display: inline-block
+      width: 3rem
+      height: 2px
+      background-color: $color-white
+
+    &::before,
+    &::after
+      content: ""
+      position: absolute
+      left: 0
+      transition: all .2s
+
+    &::before
+      top: -.8rem
+
+    &::after
+      top: .8rem
+
+  &__button:hover &__icon::before
+    top: -1rem
+
+  &__button:hover &__icon::after
+    top: 1rem
+
+  &__checkbox:checked + &__button &__icon
+    background-color: transparent
+
+  &__checkbox:checked + &__button &__icon::before
+    top: 0
+    transform: rotate(135deg)
+
+  &__checkbox:checked + &__button &__icon::after
+    top: 0
+    transform: rotate(-135deg)

@@ -9,7 +9,67 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<header class="section-header">
+  <div class="navigation">
+   <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+   <label for="nav-toggle" class="navigation__button">
+     <span class="navigation__icon"></span>
+   </label>
+    <div class="navigation__background">
+    </div>
+    <nav class="navigation__container">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a href="#header" class="navigation__link">
+            <span class="navigation__span">
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </span>
+            Home
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="#about" class="navigation__link">
+            <span class="navigation__span">
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </span>
+            About Us
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="#produce" class="navigation__link">
+            <span class="navigation__span">
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </span>
+          Produce
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="#menu" class="navigation__link">
+            <span class="navigation__span">
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </span>
+            Menus
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="#reservations" class="navigation__link">
+            <span class="navigation__span">
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </span>
+            Reservations
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="#footer" class="navigation__link">
+            <span class="navigation__span">
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </span>
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+<header class="section-header" id="header">
   <div class="header-image">
     <h1 class="heading-primary">Fresh Foods</h1>
     <h2 class="heading-sub">Lorem ipsum dolor sit amet consectetur</h2>
@@ -23,7 +83,7 @@
   </div>
 </header>
 <main>
-<section class="section-about">
+<section class="section-about" id="about">
   <h2 class="heading-secondary">
     About us
   </h2>
@@ -54,7 +114,7 @@
     </div>
   </div>
 </section>
-<section class="section-produce">
+<section class="section-produce" id="produce">
   <div class="video">
     <video class="video__content" autoplay muted loop>
       <source src="video1.mp4" type="video/mp4">
@@ -143,7 +203,7 @@
     </div>
   </div>
 </section>
-<section class="section-contact">
+<section class="section-contact" id="reservations">
   <div class="form">
     <form action="#" class="form__box">
       <h2 class="heading-tertiary">
@@ -175,7 +235,7 @@
   </div>
 </section>
 </main>
-<footer class="section-footer">
+<footer class="section-footer" id="footer">
   <h2 class="footer-heading">
     Fresh Foods
   </h2>
