@@ -14,7 +14,7 @@
     cursor: pointer
     background-color: $color-light-green
 
-   @include responsive(tab-port)
+    @include responsive(tab-port)
       top: 4rem
       right: 4rem
 
@@ -40,3 +40,10 @@
     @include responsive(phone)
       top: 3.5rem
       right: 3.5rem
+
+  &__container
+    position: fixed
+    top: 0rem
+    right: 0rem
+    width: 0
+    height: 100vh
