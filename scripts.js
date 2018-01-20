@@ -22,5 +22,20 @@ $(document).ready(function() {
         $(".about-3").animate({"opacity": "1"}, 500);
       }, 1500);
     }
+
+    function fadeMenus() {
+      setTimeout(function() {
+        $(".menu-1").animate({"opacity": "1"}, 500);
+      }, 500);
+
+      setTimeout(function() {
+        $(".menu-2").animate({"opacity": "1"}, 500);
+      }, 1000);
+
+      setTimeout(function() {
+        $(".menu-3").animate({"opacity": "1"}, 500);
+      }, 1500);
+    }
   });
 });
+
