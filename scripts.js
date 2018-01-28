@@ -8,7 +8,9 @@ $(document).ready(function() {
     }
 
     if ($(window).scrollTop() > 1900) {
-
+      $(".menu").each(function(index) {
+        $(this).delay((index++) * 500).fadeIn("slow");
+      });
     }
   });
 });
